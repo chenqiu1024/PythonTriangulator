@@ -52,7 +52,6 @@ try:
                             vertex = vertices[index]
                             flattenVertices.append(vertex[0])
                             flattenVertices.append(vertex[1])
-                ## For debug:
                 triangles = earcut.earcut(flattenVertices, holeStartIndices)
                 triangles = list(map(lambda x: indices[x], triangles))
 ##                newTriangles.append({"flatten_vertices": flattenVertices, "indices": indices, "holes": holeStartIndices, "triangles": triangles, "triangles1": triangles1})
@@ -69,5 +68,5 @@ except IOError:
 
 ## triangles = earcut.earcut([0,0, 100,0, 100,100, 0,100,  20,20, 80,20, 80,80, 20,80], [4])
 ## data = earcut.flatten([[(0,0), (100,0), (100,100), (0,100)], [(20,20), (80,20), (80,80), (20,80)]])
-data = earcut.flatten([[[0,0], [100,0], [100,100], [0,100]], [[20,20], [80,20], [80,80], [20,80]]])
-triangles = earcut.earcut(data['vertices'], data['holes'], data['dimensions'])
+## data = earcut.flatten([[[0,0], [100,0], [100,100], [0,100]], [[20,20], [80,20], [80,80], [20,80]]])
+## triangles = earcut.earcut(data['vertices'], data['holes'], data['dimensions'])
